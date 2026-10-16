@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vinni Tattoo Estúdio · Nova Venécia</title>
+<meta name="description" content="Vinni Tattoo Estúdio — tatuagem com traço fino e atenção ao detalhe, na Av. Vitória, Centro de Nova Venécia - ES.">
+<meta name="theme-color" content="#0d0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0d0d0c;--ink2:#161614;--ink3:#22211e;--bone:#ece6da;--bone2:#cfc8ba;--mute:#8a857c;--red:#c2342a;--line:rgba(236,230,218,.14);
+--serif:'Instrument Serif',Georgia,serif;--sans:'Inter Tight',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;--ease:cubic-bezier(.2,.7,.1,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;background:var(--ink)}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--ink);color:var(--bone);font:400 16px/1.6 var(--sans);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+::selection{background:var(--red);color:var(--bone)}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.mono{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:90;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:gr 1s steps(4) infinite}
+@keyframes gr{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+header.solid{background:rgba(13,13,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:baseline;gap:10px;font-family:var(--serif);font-size:1.7rem;line-height:1;letter-spacing:-.01em}
+.brand small{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.links{display:flex;gap:28px;font-size:.92rem}
+.links a{position:relative;opacity:.8;transition:opacity .3s}
+.links a:hover{opacity:1}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.links a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;background:var(--bone);color:var(--ink);font-weight:600;font-size:.92rem;border:0;cursor:pointer;transition:transform .3s var(--ease),background .3s}
+.btn:hover{transform:translateY(-2px);background:#fff}
+.btn.red{background:var(--red);color:var(--bone)}.btn.red:hover{background:#d73c31}
+.btn.ghost{background:transparent;color:var(--bone);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--bone)}
+.nav .btn{padding:10px 18px}
+@media(max-width:860px){.links{display:none}.brand small{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:-6% 0 0;z-index:-2;will-change:transform}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.62)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,13,12,.55) 0%,rgba(13,13,12,.1) 35%,rgba(13,13,12,.75) 75%,var(--ink) 100%)}
+.hero-in{padding:0 0 clamp(48px,9vh,96px);width:100%}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(13,13,12,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--mute)}
+.pill.open i{background:#5fd07a;box-shadow:0 0 0 0 rgba(95,208,122,.6);animation:pu 2s infinite}
+@keyframes pu{70%{box-shadow:0 0 0 8px rgba(95,208,122,0)}100%{box-shadow:0 0 0 0 rgba(95,208,122,0)}}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.1rem,9.5vw,8.6rem);line-height:.9;letter-spacing:-.025em;margin:22px 0 0;max-width:12ch}
+.hero h1 em{font-style:italic;color:var(--bone2)}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(105%);transition:transform 1.2s var(--ease)}
+.loaded .hero h1 .ln span{transform:none}
+.loaded .hero h1 .ln:nth-child(2) span{transition-delay:.12s}
+.underline{display:block;width:min(520px,80%);height:28px;margin-top:6px}
+.underline path{stroke:var(--red);stroke-width:2;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s .7s var(--ease)}
+.loaded .underline path{stroke-dashoffset:0}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-top:26px;flex-wrap:wrap}
+.hero-row p{max-width:42ch;color:var(--bone2);font-size:1.05rem}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.scrollcue{position:absolute;right:20px;bottom:28px;writing-mode:vertical-rl;display:flex;align-items:center;gap:12px}
+.scrollcue::after{content:"";width:1px;height:48px;background:linear-gradient(var(--bone),transparent);animation:cue 2.2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:860px){.scrollcue{display:none}}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--ink)}
+.marq-t{display:flex;gap:48px;width:max-content;animation:mq 38s linear infinite;font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.3rem);font-style:italic;white-space:nowrap}
+.marq-t span{display:flex;align-items:center;gap:48px}
+.marq-t span::after{content:"";width:9px;height:9px;border:1px solid var(--red);transform:rotate(45deg)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:clamp(80px,12vw,150px) 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin-bottom:clamp(36px,6vw,64px)}
+.head h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.3rem,5.4vw,4.4rem);line-height:.96;letter-spacing:-.02em}
+.head h2 em{color:var(--bone2)}
+.head p{color:var(--bone2);max-width:44ch;justify-self:end}
+@media(max-width:760px){.head{grid-template-columns:1fr}.head p{justify-self:start}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* about */
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,6vw,90px);align-items:center}
+.about-img{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+.about-img img{width:100%;height:118%;object-fit:cover;filter:grayscale(.9) contrast(1.05);will-change:transform}
+.about-img .tag{position:absolute;left:14px;bottom:14px}
+.about h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.8vw,3.9rem);line-height:1;letter-spacing:-.02em;margin:14px 0 22px}
+.about p{color:var(--bone2);margin-bottom:16px;max-width:52ch}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:30px}
+.facts div{padding:18px 12px 0 0}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1}
+.facts span{font-size:.8rem;color:var(--mute)}
+@media(max-width:860px){.about{grid-template-columns:1fr}.about-img{aspect-ratio:4/3.6}}
+
+/* process pin */
+.proc{height:420vh;background:var(--ink2);border-block:1px solid var(--line)}
+.pin{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-columns:1fr minmax(260px,420px) 1fr;align-items:center;gap:clamp(16px,4vw,56px);padding:84px max(20px,calc((100vw - 1240px)/2)) 40px}
+.proc-txt h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:.98;letter-spacing:-.02em;margin:12px 0 28px}
+.steps{list-style:none;display:grid;gap:4px}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:6px;padding:12px 0;border-top:1px solid var(--line);opacity:.32;transition:opacity .5s}
+.steps li.on{opacity:1}
+.steps li b{font-family:var(--mono);font-weight:500;font-size:.75rem;color:var(--red);padding-top:4px}
+.steps li h3{font-weight:600;font-size:1.04rem}
+.steps li p{grid-column:2;color:var(--bone2);font-size:.92rem;max-height:0;overflow:hidden;transition:max-height .6s var(--ease)}
+.steps li.on p{max-height:7em}
+.draw{width:100%;height:min(70svh,640px)}
+.draw svg{width:100%;height:100%;overflow:visible}
+.draw path{fill:none;stroke:var(--bone);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.draw .ghost{stroke:var(--line)}
+.draw .dot{fill:var(--red)}
+.proc-ph{position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;max-height:70svh;justify-self:end;width:100%}
+.proc-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);opacity:0;transform:scale(1.08);transition:opacity .8s,transform 1.4s var(--ease)}
+.proc-ph img.on{opacity:1;transform:none}
+.proc-bar{position:absolute;left:max(20px,calc((100vw - 1240px)/2));right:max(20px,calc((100vw - 1240px)/2));bottom:26px;height:1px;background:var(--line)}
+.proc-bar i{position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(0)}
+@media(max-width:900px){
+ .pin{grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;align-content:start;gap:16px 16px;padding-top:88px}
+ .proc-txt{grid-column:1/-1}
+ .proc-txt h2{margin:8px 0 12px;font-size:clamp(1.9rem,8vw,2.6rem)}
+ .steps li{padding:9px 0}
+ .steps li p{font-size:.86rem}
+ .draw{height:min(36svh,320px);align-self:center}
+ .proc-ph{aspect-ratio:auto;height:min(36svh,320px);align-self:center}
+}
+
+/* gallery slider */
+.slider{position:relative}
+.track{position:relative;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px max(20px,calc((100vw - 1240px)/2));overscroll-behavior-x:contain;cursor:grab;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.track.drag *{pointer-events:none}
+.slide{flex:0 0 clamp(250px,30vw,400px);scroll-snap-align:center;position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:var(--ink3)}
+.slide img{width:100%;height:100%;object-fit:cover;filter:grayscale(.85) contrast(1.05);transform:scale(1.06);transition:transform 1.2s var(--ease),filter .8s}
+.slide.on img{transform:none;filter:grayscale(0) contrast(1.02)}
+.slide figcaption{position:absolute;left:14px;right:14px;bottom:12px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.sl-ctrl{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:26px}
+.dots{display:flex;gap:6px;flex-wrap:wrap}
+.dots button{width:22px;height:3px;border:0;background:var(--line);cursor:pointer;padding:0;transition:background .3s,width .4s var(--ease)}
+.dots button.on{background:var(--bone);width:44px}
+.arrows{display:flex;gap:10px}
+.arrows button{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer;display:grid;place-items:center;transition:border-color .3s,background .3s}
+.arrows button:hover{border-color:var(--bone);background:rgba(236,230,218,.06)}
+.arrows svg{width:18px;height:18px;stroke:var(--bone);fill:none;stroke-width:1.6}
+.note{font-size:.78rem;color:var(--mute);margin-top:14px}
+@media(max-width:760px){.slide{flex-basis:76vw}.arrows{margin-right:64px}.arrows button{width:44px;height:44px}}
+
+/* care */
+.care{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.care div{padding:28px 22px 30px 0;border-right:1px solid var(--line);margin-right:22px}
+.care div:last-child{border-right:0}
+.care svg{width:34px;height:34px;stroke:var(--red);fill:none;stroke-width:1.4;margin-bottom:18px}
+.care h3{font-weight:600;font-size:1.05rem;margin-bottom:6px}
+.care p{color:var(--bone2);font-size:.93rem}
+@media(max-width:900px){.care{grid-template-columns:1fr 1fr}.care div:nth-child(2){border-right:0}}
+@media(max-width:520px){.care{grid-template-columns:1fr}.care div{border-right:0;border-bottom:1px solid var(--line);margin-right:0;padding-right:0}}
+
+/* reviews */
+.rev{background:var(--bone);color:var(--ink)}
+.rev .mono{color:#6b665d}
+.rev-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:46px}
+.score{display:flex;align-items:baseline;gap:14px}
+.score b{font-family:var(--serif);font-weight:400;font-size:clamp(4.4rem,11vw,8rem);line-height:.8;letter-spacing:-.03em}
+.stars{color:var(--red);letter-spacing:3px;font-size:1.1rem}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.quotes blockquote{padding:30px 30px 30px 0;border-top:1px solid rgba(13,13,12,.16)}
+.quotes blockquote:nth-child(odd){border-right:1px solid rgba(13,13,12,.16)}
+.quotes blockquote:nth-child(even){padding-left:30px;padding-right:0}
+.quotes p{font-family:var(--serif);font-size:clamp(1.45rem,2.6vw,2.1rem);line-height:1.15;letter-spacing:-.01em}
+.quotes cite{display:block;margin-top:14px;font-style:normal;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#6b665d}
+@media(max-width:760px){.quotes{grid-template-columns:1fr}.quotes blockquote,.quotes blockquote:nth-child(even){padding:24px 0;border-right:0!important}}
+
+/* booking */
+.book{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,90px)}
+.book h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:.96;letter-spacing:-.02em;margin:12px 0 20px}
+.book-l p{color:var(--bone2);max-width:42ch}
+.info{margin-top:34px;display:grid;gap:0}
+.info div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line);font-size:.95rem}
+.info dt{color:var(--mute);font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding-top:3px}
+.info a{border-bottom:1px solid var(--line)}
+form{background:var(--ink2);border:1px solid var(--line);border-radius:6px;padding:clamp(22px,4vw,40px);display:grid;gap:18px;min-width:0}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:grid;gap:8px;min-width:0}
+label>span{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+input,select,textarea{width:100%;min-width:0;background:transparent;border:0;border-bottom:1px solid var(--line);padding:10px 0;outline:none;border-radius:0;transition:border-color .3s}
+input:focus,select:focus,textarea:focus{border-color:var(--bone)}
+select{appearance:none;-webkit-appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23ece6da' fill='none'/%3E%3C/svg%3E") no-repeat right 4px center;padding-right:24px}
+select option{background:var(--ink2)}
+textarea{resize:vertical;min-height:84px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none;width:1px}
+.chips label{display:block}
+.chips label span{display:inline-block;padding:9px 15px;border:1px solid var(--line);border-radius:999px;font-family:var(--sans);font-size:.88rem;letter-spacing:0;text-transform:none;color:var(--bone2);cursor:pointer;transition:all .3s}
+.chips input:checked+span{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.chips input:focus-visible+span{outline:2px solid var(--red);outline-offset:2px}
+form .btn{justify-content:center;width:100%;padding:16px}
+.fine{font-size:.78rem;color:var(--mute);text-align:center}
+@media(max-width:860px){.book{grid-template-columns:1fr}}
+@media(max-width:480px){.f2{grid-template-columns:1fr}}
+
+/* map + footer */
+.map{height:clamp(280px,40vw,420px);border-radius:6px;overflow:hidden;border:1px solid var(--line);margin-top:clamp(50px,8vw,90px)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
+footer{padding:60px 0 40px;border-top:1px solid var(--line);margin-top:clamp(70px,10vw,120px)}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.foot .big{font-family:var(--serif);font-size:clamp(2.6rem,8vw,6rem);line-height:.9;letter-spacing:-.03em}
+.foot .big em{color:var(--red)}
+.foot small{color:var(--mute);font-size:.8rem;display:block;margin-top:16px}
+.wa{position:fixed;right:16px;bottom:16px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.4);transition:transform .3s var(--ease)}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:28px;height:28px;fill:#fff}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1 .ln span{transform:none}.underline path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header id="hd">
+ <div class="wrap nav">
+  <a href="#topo" class="brand">Vinni <small>Tattoo Estúdio</small></a>
+  <nav class="links"><a href="#estudio">Estúdio</a><a href="#processo">Processo</a><a href="#trabalhos">Trabalhos</a><a href="#avaliacoes">Avaliações</a><a href="#agendar">Contato</a></nav>
+  <a class="btn" href="#agendar">Orçamento</a>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="topo">
+ <div class="hero-bg" id="heroBg"><picture>
+  <source media="(max-width:700px)" srcset="https://images.unsplash.com/photo-1605647533135-51b5906087d0?auto=format&fit=crop&w=900&h=1500&q=70">
+  <img src="https://images.unsplash.com/photo-1552627019-947c3789ffb5?auto=format&fit=crop&w=2000&h=1300&q=72" alt="Tatuador trabalhando no estúdio" fetchpriority="high">
+ </picture></div>
+ <div class="wrap hero-in">
+  <span class="pill" id="status"><i></i><b>Av. Vitória · Centro · Nova Venécia</b></span>
+  <h1><span class="ln"><span>Arte que</span></span><span class="ln"><span><em>fica na pele.</em></span></span></h1>
+  <svg class="underline" viewBox="0 0 520 28" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 18 C 90 6, 170 24, 260 14 S 430 4, 516 16"/></svg>
+  <div class="hero-row">
+   <p>Traço fino, detalhe e calma do primeiro rabisco à última linha. Conte sua ideia e a gente desenha junto.</p>
+   <div class="hero-ctas"><a class="btn red" href="#agendar">Quero fazer minha tattoo</a><a class="btn ghost" href="#trabalhos">Ver trabalhos</a></div>
+  </div>
+ </div>
+
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-t">
+ <span>traço fino</span><span>detalhe</span><span>projeto do seu jeito</span><span>atendimento com calma</span><span>Nova Venécia</span>
+ <span>traço fino</span><span>detalhe</span><span>projeto do seu jeito</span><span>atendimento com calma</span><span>Nova Venécia</span>
+</div></div>
+
+<section class="sec" id="estudio">
+ <div class="wrap about">
+  <div class="about-img rv"><img id="aboutImg" src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1100&h=1300&q=70" alt="Tatuagem sendo feita em detalhe" loading="lazy"><span class="pill tag"><i></i>no estúdio</span></div>
+  <div class="rv">
+   <span class="mono">O estúdio</span>
+   <h2>Cada linha pensada <em>antes</em> de virar pele.</h2>
+   <p>No Vinni Tattoo Estúdio, a tatuagem começa numa conversa: o que ela significa pra você, onde vai ficar, como ela envelhece com o tempo. Só depois vem o desenho, e só depois a agulha.</p>
+   <p>Quem já tatuou aqui fala de um profissional atencioso e versátil, que transmite tranquilidade e caprica nos traços finos.</p>
+   <div class="facts">
+    <div><b>4,8</b><span>nota no Google</span></div>
+    <div><b>16</b><span>avaliações</span></div>
+    <div><b>6</b><span>dias por semana</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="proc" id="processo">
+ <div class="pin" id="pin">
+  <div class="proc-txt">
+   <span class="mono">Do rabisco à pele</span>
+   <h2>Como sua tattoo nasce</h2>
+   <ol class="steps" id="steps">
+    <li class="on"><b>01</b><h3>A conversa</h3><p>Você manda a ideia, referências e o local do corpo. A gente entende o significado e o tamanho certo.</p></li>
+    <li><b>02</b><h3>O desenho</h3><p>O projeto é desenhado pra você e ajustado até ficar do seu jeito, antes de marcar a sessão.</p></li>
+    <li><b>03</b><h3>A sessão</h3><p>Dia marcado, ambiente tranquilo e sem pressa. Cada linha no tempo dela.</p></li>
+    <li><b>04</b><h3>Os cuidados</h3><p>Você sai com as orientações de cicatrização e pode chamar no WhatsApp se tiver qualquer dúvida.</p></li>
+   </ol>
+  </div>
+  <div class="draw" aria-hidden="true">
+   <svg viewBox="0 0 400 720" preserveAspectRatio="xMidYMid meet">
+    <path class="ghost" d="M210 700 C 190 610, 232 525, 206 432 C 186 362, 226 292, 200 222 M206 566 C 150 552, 118 506, 108 462 C 160 472, 196 512, 206 566 M210 474 C 266 458, 296 412, 302 370 C 250 382, 214 422, 210 474 M202 364 C 150 344, 130 302, 124 266 C 170 282, 196 318, 202 364 M200 222 C 130 232, 94 160, 130 110 C 150 82, 186 92, 200 108 C 214 92, 254 82, 274 110 C 306 160, 270 232, 200 222 M200 214 C 156 210, 146 152, 186 134 C 228 118, 256 160, 234 188 C 214 208, 182 196, 186 172 C 190 152, 214 152, 214 168"/>
+    <path id="stroke" pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:1" d="M210 700 C 190 610, 232 525, 206 432 C 186 362, 226 292, 200 222 M206 566 C 150 552, 118 506, 108 462 C 160 472, 196 512, 206 566 M210 474 C 266 458, 296 412, 302 370 C 250 382, 214 422, 210 474 M202 364 C 150 344, 130 302, 124 266 C 170 282, 196 318, 202 364 M200 222 C 130 232, 94 160, 130 110 C 150 82, 186 92, 200 108 C 214 92, 254 82, 274 110 C 306 160, 270 232, 200 222 M200 214 C 156 210, 146 152, 186 134 C 228 118, 256 160, 234 188 C 214 208, 182 196, 186 172 C 190 152, 214 152, 214 168"/>
+    <circle class="dot" id="needle" r="4" cx="210" cy="700"/>
+   </svg>
+  </div>
+  <div class="proc-ph" id="procPh">
+   <img class="on" src="https://images.unsplash.com/photo-1769192932233-e493e48dfb60?auto=format&fit=crop&w=800&h=1060&q=68" alt="Tintas de tatuagem separadas" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1667994181140-18acea52c614?auto=format&fit=crop&w=800&h=1060&q=68" alt="Mãos do tatuador no desenho" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1597852075234-fd721ac361d3?auto=format&fit=crop&w=800&h=1060&q=68" alt="Sessão de tatuagem" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1564426622559-5af68da63b96?auto=format&fit=crop&w=800&h=1060&q=68" alt="Tatuagem finalizada" loading="lazy">
+  </div>
+  <div class="proc-bar"><i id="procBar"></i></div>
+ </div>
+</section>
+
+<section class="sec" id="trabalhos">
+ <div class="wrap head">
+  <h2 class="rv">Trabalhos <em>que dá vontade de ficar olhando</em></h2>
+  <p class="rv">Arraste para o lado. Toque em uma foto para centralizar.</p>
+ </div>
+ <div class="slider" id="gal">
+  <div class="track">
+   <figure class="slide"><img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=800&h=1000&q=68" alt="Tatuagem em antebraço" loading="lazy" draggable="false"><figcaption><span>Antebraço</span><span>01</span></figcaption></figure>
+   <figure class="slide"><img src="https://images.unsplash.com/photo-1564426622559-5af68da63b96?auto=format&fit=crop&w=800&h=1000&q=68" alt="Tatuagem com traço fino" loading="lazy" draggable="false"><figcaption><span>Traço fino</span><span>02</span></figcaption></figure>
+   <figure class="slide"><img src="https://images.unsplash.com/photo-1647125261179-a60e46a7f172?auto=format&fit=crop&w=800&h=1000&q=68" alt="Tatuagem de linha no braço" loading="lazy" draggable="false"><figcaption><span>Line art</span><span>03</span></figcaption></figure>
+   <figure class="slide"><img src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=800&h=1000&q=68" alt="Tatuagem em andamento" loading="lazy" draggable="false"><figcaption><span>Em sessão</span><span>04</span></figcaption></figure>
+   <figure class="slide"><img src="https://images.unsplash.com/photo-1627458514257-41d0ea46e326?auto=format&fit=crop&w=800&h=1000&q=68" alt="Detalhe de sombreamento" loading="lazy" draggable="false"><figcaption><span>Sombreado</span><span>05</span></figcaption></figure>
+   <figure class="slide"><img src="https://images.unsplash.com/photo-1616879564267-a336232e3a95?auto=format&fit=crop&w=800&h=1000&q=68" alt="Tatuador concentrado" loading="lazy" draggable="false"><figcaption><span>Detalhe</span><span>06</span></figcaption></figure>
+   <figure class="slide"><img src="https://images.unsplash.com/photo-1775135981378-4e7c1767436d?auto=format&fit=crop&w=800&h=1000&q=68" alt="Sessão no estúdio" loading="lazy" draggable="false"><figcaption><span>Estúdio</span><span>07</span></figcaption></figure>
+   <figure class="slide"><img src="https://images.unsplash.com/photo-1775134061575-80f4bbd1a189?auto=format&fit=crop&w=800&h=1000&q=68" alt="Tatuagem em close" loading="lazy" draggable="false"><figcaption><span>Close</span><span>08</span></figcaption></figure>
+  </div>
+  <div class="wrap sl-ctrl"><div class="dots"></div><div class="arrows"><button class="prev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button class="next" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+  <p class="wrap note">Fotos ilustrativas — aqui entram os trabalhos reais do Instagram do estúdio.</p>
+ </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+ <div class="wrap">
+  <div class="head"><h2 class="rv">Antes de <em>tatuar</em></h2><p class="rv">Algumas coisas que ajudam a sua tattoo a sair (e cicatrizar) do jeito que você imaginou.</p></div>
+  <div class="care rv">
+   <div><svg viewBox="0 0 32 32"><path d="M6 26l4-1 15-15-3-3L7 22l-1 4zM19 10l3 3"/></svg><h3>Leve referências</h3><p>Fotos, desenhos, prints. Tudo ajuda a chegar no traço certo.</p></div>
+   <div><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M16 10v6l4 3"/></svg><h3>Descanse bem</h3><p>Durma bem na noite anterior e venha alimentado.</p></div>
+   <div><svg viewBox="0 0 32 32"><path d="M16 5c5 6 8 10 8 14a8 8 0 0 1-16 0c0-4 3-8 8-14z"/></svg><h3>Pele hidratada</h3><p>Beba água e hidrate a região nos dias antes da sessão.</p></div>
+   <div><svg viewBox="0 0 32 32"><path d="M5 9h22v15H5zM5 9l11 8 11-8"/></svg><h3>Tire dúvidas</h3><p>Qualquer pergunta, antes ou depois, é só chamar no WhatsApp.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec rev" id="avaliacoes">
+ <div class="wrap">
+  <div class="rev-top">
+   <div><span class="mono">Quem tatuou fala</span><div class="score rv"><b>4,8</b><div><div class="stars">★★★★★</div><span class="mono">16 avaliações no Google</span></div></div></div>
+  </div>
+  <div class="quotes">
+   <blockquote class="rv"><p>“Um trabalho de ficar admirando pq é realmente obra de arte!”</p><cite>Avaliação no Google</cite></blockquote>
+   <blockquote class="rv"><p>“Profissional super qualificado e atualizado no meio artístico.”</p><cite>Avaliação no Google</cite></blockquote>
+   <blockquote class="rv"><p>“Muito detalhista e de traços finos… Super indico!”</p><cite>Gabi P. · Google</cite></blockquote>
+   <blockquote class="rv"><p>“Super atencioso e versátil. Gente boa demais, transmite tranquilidade.”</p><cite>Lais B. · Google</cite></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="agendar">
+ <div class="wrap">
+  <div class="book">
+   <div class="book-l rv">
+    <span class="mono">Orçamento</span>
+    <h2>Conta sua <em>ideia</em>.</h2>
+    <p>Preencha rapidinho e a mensagem já sai pronta no WhatsApp do estúdio. Pode mandar as referências por lá.</p>
+    <dl class="info">
+     <div><dt>Endereço</dt><dd>Av. Vitória, Centro<br>Nova Venécia – ES</dd></div>
+     <div><dt>Horário</dt><dd>Seg a Sex · 9h às 18h30<br>Sáb · 9h às 15h · Dom fechado</dd></div>
+     <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5527999174367" target="_blank" rel="noopener">(27) 99917-4367</a></dd></div>
+     <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/vinnitattoostudio/" target="_blank" rel="noopener">@vinnitattoostudio</a></dd></div>
+    </dl>
+   </div>
+   <form id="f" class="rv" novalidate>
+    <div class="f2">
+     <label><span>Seu nome</span><input name="nome" required autocomplete="name" placeholder="Como te chamo?"></label>
+     <label><span>Local do corpo</span><select name="local"><option>Braço</option><option>Antebraço</option><option>Mão / dedos</option><option>Perna</option><option>Costas</option><option>Costela</option><option>Pescoço / nuca</option><option>Ainda não sei</option></select></label>
+    </div>
+    <label><span>Sua ideia</span><textarea name="ideia" required placeholder="Ex.: um ramo de flores em traço fino, com o nome da minha filha"></textarea></label>
+    <div><label style="margin-bottom:10px"><span>Tamanho aproximado</span></label>
+     <div class="chips">
+      <label><input type="radio" name="tam" value="Pequena (até 8 cm)" checked><span>Pequena</span></label>
+      <label><input type="radio" name="tam" value="Média (8 a 15 cm)"><span>Média</span></label>
+      <label><input type="radio" name="tam" value="Grande (15 cm+)"><span>Grande</span></label>
+      <label><input type="radio" name="tam" value="Fechamento"><span>Fechamento</span></label>
+     </div></div>
+    <div><label style="margin-bottom:10px"><span>Primeira tattoo?</span></label>
+     <div class="chips">
+      <label><input type="radio" name="pri" value="Sim, é a primeira" checked><span>Sim</span></label>
+      <label><input type="radio" name="pri" value="Não, já tenho outras"><span>Já tenho outras</span></label>
+     </div></div>
+    <button class="btn red" type="submit">Enviar pelo WhatsApp</button>
+    <p class="fine">Abre o WhatsApp com a mensagem pronta — nada é enviado sem você confirmar.</p>
+   </form>
+  </div>
+  <div class="map rv"><iframe title="Mapa do estúdio" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=-18.710578,-40.3986498&z=17&output=embed"></iframe></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap foot">
+  <div><div class="big">Vinni <em>Tattoo</em><br>Estúdio</div><small>Av. Vitória, Centro · Nova Venécia – ES · (27) 99917-4367</small></div>
+  <a class="btn ghost" href="#topo">Voltar ao topo ↑</a>
+ </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5527999174367" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg></a>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(()=>{
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+setTimeout(()=>document.documentElement.classList.add('loaded'),80);
+
+// smooth scroll
+let lenis=null;
+if(window.Lenis&&!RM){lenis=new Lenis({duration:1.1,smoothWheel:true});window.__lenis=lenis;const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf)}
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:a.getAttribute('href')==='#topo'?0:-70}):t.scrollIntoView({behavior:'smooth'})}));
+
+// open status (America/Sao_Paulo)
+const H={0:null,1:[540,1110],2:[540,1110],3:[540,1110],4:[540,1110],5:[540,1110],6:[540,900]};
+function status(){const p=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x=>[x.type,x.value]));
+ const d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday),m=(+p.hour)*60+(+p.minute),h=H[d],el=$('#status');
+ const fmt=v=>Math.floor(v/60)+'h'+(v%60?String(v%60).padStart(2,'0'):'');
+ if(h&&m>=h[0]&&m<h[1]){el.classList.add('open');el.querySelector('b').textContent='Aberto agora · até '+fmt(h[1])}
+ else{el.classList.remove('open');let n=d,dd=0;do{n=(n+1)%7;dd++}while(!H[n]);const today=h&&m<h[0];el.querySelector('b').textContent='Fechado · abre '+(today?'hoje às '+fmt(h[0]):(dd===1?'amanhã':['dom','seg','ter','qua','qui','sex','sáb'][n])+' às '+fmt(H[today?d:n][0]))}}
+status();setInterval(status,60000);
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+$$('.rv').forEach(el=>io.observe(el));
+
+// scroll-driven
+const hd=$('#hd'),heroBg=$('#heroBg'),about=$('#aboutImg'),proc=$('#processo'),stroke=$('#stroke'),needle=$('#needle'),bar=$('#procBar'),steps=$$('#steps li'),phs=$$('#procPh img');
+const len=stroke.getTotalLength();let lastStep=-1,ticking=false;
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+function frame(){ticking=false;const y=scrollY,vh=innerHeight;
+ hd.classList.toggle('solid',y>40);
+ if(y<vh*1.2&&!RM)heroBg.style.transform=`translate3d(0,${y*.25}px,0) scale(${1+y/vh*.06})`;
+ const ar=about.parentElement.getBoundingClientRect();if(ar.top<vh&&ar.bottom>0&&!RM)about.style.transform=`translate3d(0,${(ar.top/vh-.5)*-8}%,0)`;
+ const r=proc.getBoundingClientRect(),p=clamp(-r.top/(r.height-vh),0,1);
+ const dp=clamp(p*1.08,0,1);stroke.style.strokeDashoffset=1-dp;
+ const pt=stroke.getPointAtLength(len*dp);needle.setAttribute('cx',pt.x);needle.setAttribute('cy',pt.y);
+ bar.style.transform=`scaleX(${p})`;
+ const s=Math.min(3,Math.floor(p*4));if(s!==lastStep){lastStep=s;steps.forEach((li,i)=>li.classList.toggle('on',i===s));phs.forEach((im,i)=>im.classList.toggle('on',i===s))}
+}
+const onScroll=()=>{if(!ticking){ticking=true;requestAnimationFrame(frame)}};
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);frame();
+
+// slider
+function slider(root){const track=root.querySelector('.track'),slides=[...track.children],dots=root.querySelector('.dots');
+ let active=0,lockUntil=0,idle=performance.now(),visible=false;
+ slides.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Foto '+(i+1));b.onclick=()=>{idle=performance.now();goTo(i)};dots.appendChild(b)});
+ const setActive=i=>{active=i;[...dots.children].forEach((d,j)=>d.classList.toggle('on',j===i));slides.forEach((s,j)=>s.classList.toggle('on',j===i))};
+ const leftOf=i=>slides[i].offsetLeft-(track.clientWidth-slides[i].clientWidth)/2;
+ function goTo(i,instant){i=(i+slides.length)%slides.length;setActive(i);lockUntil=performance.now()+800;track.scrollTo({left:leftOf(i),behavior:instant||RM?'auto':'smooth'})}
+ function nearest(x){const c=x+track.clientWidth/2;let b=0,bd=1e9;slides.forEach((s,i)=>{const d=Math.abs(s.offsetLeft+s.clientWidth/2-c);if(d<bd){bd=d;b=i}});return b}
+ function syncActive(force){if(!force&&performance.now()<lockUntil)return;const n=nearest(track.scrollLeft);if(n!==active)setActive(n)}
+ let st;track.addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(()=>syncActive(),90)},{passive:true});
+ track.addEventListener('scrollend',()=>{lockUntil=0;syncActive(true)});
+ root.querySelector('.prev').onclick=()=>{idle=performance.now();goTo(active-1)};
+ root.querySelector('.next').onclick=()=>{idle=performance.now();goTo(active+1)};
+ slides.forEach((s,i)=>s.addEventListener('click',()=>{if(moved)return;idle=performance.now();goTo(i)}));
+ // mouse drag
+ let down=false,sx=0,sl=0,lx=0,lt=0,v=0,moved=false;
+ track.addEventListener('pointerdown',e=>{idle=performance.now();if(e.pointerType!=='mouse')return;down=true;moved=false;sx=lx=e.clientX;sl=track.scrollLeft;lt=performance.now();v=0});
+ addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>4&&!moved){moved=true;track.classList.add('drag')}if(!moved)return;track.scrollLeft=sl-dx;const t=performance.now();v=(e.clientX-lx)/Math.max(1,t-lt);lx=e.clientX;lt=t});
+ addEventListener('pointerup',()=>{if(!down)return;down=false;if(!moved)return;track.classList.remove('drag');const target=nearest(track.scrollLeft-v*220);goTo(target);setTimeout(()=>moved=false,50)});
+ ['touchstart','wheel','keydown'].forEach(ev=>track.addEventListener(ev,()=>idle=performance.now(),{passive:true}));
+ new IntersectionObserver(es=>visible=es[0].isIntersecting,{threshold:.35}).observe(root);
+ setInterval(()=>{if(visible&&!document.hidden&&!RM&&performance.now()-idle>6000)goTo(active+1)},4500);
+ addEventListener('resize',()=>goTo(active,true));
+ setActive(0);requestAnimationFrame(()=>goTo(0,true));
+}
+slider($('#gal'));
+
+// form -> whatsapp
+$('#f').addEventListener('submit',e=>{e.preventDefault();const f=e.target,d=new FormData(f);
+ const nome=(d.get('nome')||'').trim(),ideia=(d.get('ideia')||'').trim();
+ if(!nome){f.nome.focus();f.nome.style.borderColor='var(--red)';return}
+ if(!ideia){f.ideia.focus();f.ideia.style.borderColor='var(--red)';return}
+ const msg=`Olá, Vinni! Me chamo ${nome} e quero fazer um orçamento de tattoo.\n\n• Ideia: ${ideia}\n• Local: ${d.get('local')}\n• Tamanho: ${d.get('tam')}\n• ${d.get('pri')}\n\nPosso mandar as referências por aqui?`;
+ window.open('https://wa.me/5527999174367?text='+encodeURIComponent(msg),'_blank','noopener')});
+})();
+</script>
+</body>
+</html>
